@@ -1,0 +1,100 @@
+.employees {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 70% 30%;
+  min-height: 150px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 50px 10px;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 50% 50%;
+  }
+  &__header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: silver;
+    text-align: center;
+    color: #fff;
+    background-color: #04aa6d;
+    padding: 10px 0;
+  }
+  &__column {
+    background-color: #f2f2f2;
+    &:last-of-type {
+      border-left: 4px solid #04aa6d;
+    }
+  }
+  &__content {
+    padding: 20px 10px;
+    &_users {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  &__letterWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  &__letter {
+    font-size: 1rem;
+    border-bottom: 4px solid #04aa6d;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  &__userName {
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    &_active {
+      color: #04aa6d;
+    }
+  }
+  &__userData {
+    &:not(:first-of-type) {
+      margin-top: 15px;
+    }
+  }
+  &__status {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    label {
+      margin: 2px 0;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  &__birthdayContainer {
+  }
+  &__birthdayMonthContainer:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  &__birthdayList {
+    li:not(:first-of-type) {
+      margin-top: 5px;
+    }
+  }
+  &__birthdayMonth {
+    font-size: 1rem;
+    border-bottom: 4px solid #04aa6d;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  &__birthdateData {
+  }
+}
